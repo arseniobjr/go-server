@@ -20,7 +20,6 @@ func main() {
 	}
 }
 
-// test test
 // Response is what the server sends back to the user.
 // Request is what the user sends to the server.
 
