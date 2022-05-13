@@ -22,6 +22,8 @@ func main() {
 
 // Response is what the server sends back to the user.
 // Request is what the user sends to the server.
+
+// Handles the user's Get request
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 not found", http.StatusNotFound)
@@ -35,6 +37,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("hello!")
 }
 
+// Handles the user's Post request form
 func formHandler(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
 		fmt.Fprintf(w, "ParseForm() err: %v", err)
